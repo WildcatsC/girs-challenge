@@ -1,13 +1,17 @@
-from email.policy import default
 from django.db import models
 
-# Create your models here.
-class Pipe(models.Model):
-    geometry = models.JSONField(null=False, default = dict)
-    wear = models.DecimalField(decimal_places=5, max_digits=6, null=False, default=0)
-    weather = models.DecimalField(decimal_places=5, max_digits=6, null=False, default=0)
-    vegetation = models.DecimalField(decimal_places=5, max_digits=6, null=False, default=0)
-    names = models.CharField(max_length=50, default = '', unique=True)
+# Create your models here
+# decimal_places=5, max_digits=6,
 
+class Pipe(models.Model):
+    geometry = models.TextField('Pipeline Location', null=True)
+    wear = models.TextField('Wear', null=True)
+    weather = models.TextField('Weather', null=True)
+    vegetation = models.TextField('Vegetation', null=True)
+    names = models.TextField('Pipeline Name', null=True)
+    risk = models.TextField('Risk', null=True)
+
+    
     # fat model, thin views
+
     
