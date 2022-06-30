@@ -1,3 +1,5 @@
+import json
+from statistics import geometric_mean
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.decorators import api_view
@@ -24,7 +26,7 @@ def pipe_list(request):
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
-        data = request, #JSONParser().parse(request)
+        data = JSONParser().parse(request)
         serializer = PipeSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
@@ -39,7 +41,8 @@ def pipe_detail(request, pk):
 
     if request.method == 'GET':
         serializer = PipeSerializer(pipe)
-        return JsonResponse(serializer.data)
+        # return JsonResponse(serializer.data)
+        return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'PUT':
         data = JSONParser().parse(request)
@@ -52,6 +55,15 @@ def pipe_detail(request, pk):
     elif request.method == 'DELETE':
         pipe.delete()
         return HttpResponse(status=204)
-    
 
-#  "geometry":"a", "wear":"b", ""weather":"c", "vegetation":"d", "names":"e", "risk":"f", "id":151
+def pipe_threshold(request, risk):
+    try:
+        pipe = Pipe.objects.filter(risk__gt=risk)
+    except Pipe.DoesNotExist:
+        return HttpResponse(status=404)
+    
+    if request.method == 'GET': 
+        serializer = PipeSerializer(pipe, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    # if request.method == 'GET':
+        # return JsonResponse
