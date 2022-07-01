@@ -1,15 +1,8 @@
-import json
-from statistics import geometric_mean
-from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from django.http import Http404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
 from .models import Pipe
 from .serializer import PipeSerializer
 
@@ -56,14 +49,24 @@ def pipe_detail(request, pk):
         pipe.delete()
         return HttpResponse(status=204)
 
-def pipe_threshold(request, risk):
+def pipe_threshold_gt(request, risk):
+    risk = float(risk)
     try:
-        pipe = Pipe.objects.filter(risk__gt=risk)
+        pipe = Pipe.objects.filter(risk__gte=risk)
     except Pipe.DoesNotExist:
         return HttpResponse(status=404)
     
     if request.method == 'GET': 
         serializer = PipeSerializer(pipe, many=True)
         return JsonResponse(serializer.data, safe=False)
-    # if request.method == 'GET':
-        # return JsonResponse
+
+def pipe_threshold_lt(request, risk):
+    risk = float(risk)
+    try:
+        pipe = Pipe.objects.filter(risk__lt=risk)
+    except Pipe.DoesNotExist:
+        return HttpResponse(status=404)
+    
+    if request.method == 'GET': 
+        serializer = PipeSerializer(pipe, many=True)
+        return JsonResponse(serializer.data, safe=False)
