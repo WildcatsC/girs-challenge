@@ -53,9 +53,9 @@ const Display = (props) => {
     };
 
     const changeThreshold = () => {
-        if (typeof(t) == String) {
-            alert('Must be numbers!')
-        }
+        // if (typeof(t) == String) {
+            alert(typeof(t) + 'is an invalid input')
+        // }
 
         if (t < 0 || t > 1) {
             alert('Invalid threshold! Must between 0 and 1.')
