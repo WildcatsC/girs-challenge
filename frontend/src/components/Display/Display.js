@@ -24,7 +24,7 @@ const Display = (props) => {
 
 
     const getData = async() => {
-        const response = await fetch("http://localhost:8000/list", {method : 'GET'});
+        const response = await fetch("http://ec2-52-53-245-35.us-west-1.compute.amazonaws.com:8000/list", {method : 'GET'});
         const data = await response.json();
         setData(data);
     };
