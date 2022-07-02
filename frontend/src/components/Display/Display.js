@@ -54,7 +54,7 @@ const Display = (props) => {
 
     const changeThreshold = () => {
         if (typeof(t)== String){
-            alsert('Must be numbers!')
+            alert('Must be numbers!')
             return
         }
         if (t < 0 || t > 1) {
