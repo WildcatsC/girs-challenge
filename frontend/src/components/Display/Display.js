@@ -53,8 +53,9 @@ const Display = (props) => {
     };
 
     const changeThreshold = () => {
-        if (t < 0 || t > 1 || typeof(t)==String) {
-            alert(typeof(t))
+        t = Number(t)
+        if (t < 0 || t > 1) {
+            // alert(typeof(t))
             alert('Invalid threshold! Must between 0 and 1.')
             return
         }
