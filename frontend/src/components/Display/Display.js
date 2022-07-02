@@ -53,6 +53,8 @@ const Display = (props) => {
     };
 
     const changeThreshold = () => {
+        alert(typeof(t));
+        
         if ((typeof(t) != Number) || (t < 0 || t > 1)) {
             alert('Invalid threshold !!!')
             return
