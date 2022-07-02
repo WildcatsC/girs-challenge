@@ -1,6 +1,4 @@
-# girs-challenge
-
-**Django REEST framework + React**
+This is a web application using **Django REEST framework + React** for powerline visulization, data provided by GIRS @UCLA.
 
 Summary of development:
 
