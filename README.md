@@ -29,7 +29,7 @@ Access to one:
 
 - **PUT:** same as above
 
-- **DELETE:** smave as above
+- **DELETE:** same as above
 
 ## To be improved: 
 
