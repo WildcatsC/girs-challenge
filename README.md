@@ -25,7 +25,7 @@ Planned to be finished within 5 days during school visit, but other factors (har
 4. (Deployment) Docker
 5. TBD
 
-### Other endpoints available: 
+### Other available endpoints: 
 
 access to all:
 
