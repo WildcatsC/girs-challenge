@@ -24,7 +24,7 @@ const Display = (props) => {
 
 
     const getData = async() => {
-        const response = await fetch("http://127.0.0.1:8000/list", {method : 'GET'});
+        const response = await fetch("http://localhost:8000/list", {method : 'GET'});
         const data = await response.json();
         setData(data);
     };
