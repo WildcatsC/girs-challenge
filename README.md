@@ -25,7 +25,7 @@ Access to all:
 
 Access to one: 
 
-- **GET:** [GET the 100th pwerline](http://ec2-52-53-245-35.us-west-1.compute.amazonaws.com:8000/detail/100)
+- **GET:** [GET the 100th powerline](http://ec2-52-53-245-35.us-west-1.compute.amazonaws.com:8000/detail/100)
 
 - **PUT:** same as above
 
