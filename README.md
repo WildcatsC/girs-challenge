@@ -1,4 +1,4 @@
-## This is a web application using Django REST framework + React for powerline visulization, with data provided by GIRS @UCLA.
+## This is a web application using Django REST framework + React for powerline visulization, with data provided by Prof. Chalgham and GIRS @UCLA.
 
 Planned to be finished within 5 days during school visit, but other factors (hardware technical problems, getting covid...) affacted the development process and extended it to be 10 days.
 
