@@ -1,5 +1,5 @@
 var pairs = {
-    "hello" : "world"
+    "ucla" : "girs"
 }
 
 export default pairs;
