@@ -9,7 +9,7 @@ password: girs
 
 Planned to be finished within 5 days during school visit, but other factors (hardware technical problems, getting covid...) affacted the development process and extended it to be 10 days.
 
-### Stages of development: 
+## Stages of development: 
 
 1. Preparing for the backend: learning Django, getting the data ready, etc. 
 2. Preparing for the frontend: reviewing React components.
@@ -17,7 +17,7 @@ Planned to be finished within 5 days during school visit, but other factors (har
 4. Frontend development: coding the logics and components. 
 5. Integration and deployment: integrating the seperated backend and frontend, learning and deploying on AWS EC2.
 
-### Other available endpoints: 
+## Other available endpoints: 
 
 Access to all:
 
@@ -31,7 +31,7 @@ Access to one:
 
 - **DELETE:** smave as above
 
-### To be improved: 
+## To be improved: 
 
 1. (General) A more detailed Gantt chart can be used, divide the whole task and conquer the smaller tasks. Can be devided even more. 
 2. (Django) function views VS class views?
