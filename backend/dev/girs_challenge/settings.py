@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
     'girs_challenge',
-    'rest_framework',
+    # 'rest_framework',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
